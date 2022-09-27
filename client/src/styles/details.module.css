@@ -7,3 +7,19 @@ background-image: url("https://static.vecteezy.com/system/resources/previews/003
 border-radius: 3rem;
 margin-bottom:1.5rem;
 }
+.btn {
+    height: 25px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    height: 25px;
+    width: 80px;
+    transition: 0.2s;
+}

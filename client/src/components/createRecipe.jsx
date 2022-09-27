@@ -5,15 +5,7 @@ import { useState } from "react"
 import { createRecipe, getDiets } from "../redux/actions"
 import style from "../styles/createRecipe.module.css"
 
-let validURL = (str) => {
-    var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-        '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-        '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-        '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
-    return !!pattern.test(str);
-}
+
 // Funcion para validar el nombre. (Solo caracteres a-z A-Z)
 let validName = (str) => {
     let pattern = /^[a-zA-Z\s]+$/;
@@ -35,17 +27,9 @@ let validate = (input) => {
     if (!input.summary) {
         errors.summary = "Summary cannot be null."
     }
-    // El score tiene que ser de 1 a 100, puede ser nulo.
-    if (input.score < 1 || input.score > 100) {
-        errors.score = "The score is 1 - 100."
-    }
     // El healthScore tiene que ser de 1 a 100, puede ser nulo.
     if (input.healthScore < 1 || input.healthScore > 100) {
         errors.healthScore = "The health score is 1 - 100."
-    }
-    // La imagen puede no ingresarse, si se ingresa tiene que pasar la validación.
-    if (input.image && !validURL(input.image)) {
-        errors.image = "Invalid URL."
     }
     // Obligatorio los pasos.
     if (!input.steps) {
@@ -138,23 +122,23 @@ function CreateRecipe(props) {
 
     return (
         <div>
-            <div className={style.enc}>
+            <div>
 
                 <div>
-                    <h1 className={style.title}>
+                    <h1 >
                         Create Recipe
                     </h1>
                 </div>
 
                 <div>
-                    <hr className={style.hr}></hr>
+                    <hr></hr>
                 </div>
 
             </div>
 
             <form className={style.form} onSubmit={handleSubmit}>
 
-                <div className={style.div1}>
+                <div>
                     <div><label>Name: </label></div>
                     <input
                         type={"text"}
@@ -168,7 +152,6 @@ function CreateRecipe(props) {
                 <div>
                     <div className={style.txt}><label>Summary: </label></div>
                     <textarea
-                        className={style.inputext}
                         type={"text"}
                         name={"summary"}
                         value={input.summary}
@@ -180,7 +163,6 @@ function CreateRecipe(props) {
                 <div>
                     <div className={style.txt}><label>Cooking time: </label></div>
                     <input
-                        className={style.inputScore}
                         type={"number"}
                         name={"ready"}
                         value={input.ready}
@@ -192,7 +174,6 @@ function CreateRecipe(props) {
                 <div>
                     <div className={style.txt}><label>Health Score: </label></div>
                     <input
-                        className={style.inputScore}
                         type={"number"}
                         name={"healthScore"}
                         value={input.healthScore}
@@ -204,7 +185,6 @@ function CreateRecipe(props) {
                 <div>
                     <div className={style.txt}><label>URL Image: </label></div>
                     <input
-                        className={style.input}
                         type={"url"}
                         name={"image"}
                         value={input.image}
@@ -216,7 +196,6 @@ function CreateRecipe(props) {
                 <div>
                     <div className={style.txt}><label>Steps: </label></div>
                     <textarea
-                        className={style.inputext}
                         type={"text"}
                         name={"steps"}
                         value={input.steps}
@@ -226,7 +205,7 @@ function CreateRecipe(props) {
                 </div>
 
                 <div>
-                    <div className={style.txt}><label>Types of diet: </label></div>
+                    <div ><label>Types of diet: </label></div>
                     <br></br>
                     {props.diets.slice(0, 13).map(d => {
                         return (
@@ -240,7 +219,7 @@ function CreateRecipe(props) {
                 </div>
 
                 <div>
-                    <div className={style.txt}>
+                    <div>
                         <label>ADD Diet: </label>
                     </div>
                     <div>
@@ -251,11 +230,11 @@ function CreateRecipe(props) {
 
                 <br></br>
                 <div>
-                    <button className={style.btn1} type="submit" >CREATE</button>
+                    <button className={style.btn} type="submit" >CREATE</button>
                 </div>
                 <br></br>
                 <div>
-                    <Link to="/home"><button className={style.btn2}>GO BACK</button></Link>
+                    <Link to="/home"><button className={style.btn}>GO BACK</button></Link>
                 </div>
                 <br></br>
 

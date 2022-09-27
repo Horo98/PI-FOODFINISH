@@ -53,7 +53,6 @@ export function getDiets() {
     return async function(dispatch) {
         try {
             let response = await axios.get(`http://localhost:3001/types`);
-            if(response.data.length < 13) response = await axios.get(`http://localhost:3001/types`);
             return dispatch({
                 type: "GET_DIETS",
                 payload: response.data.map(d => d.name)

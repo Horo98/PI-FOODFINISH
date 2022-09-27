@@ -30,8 +30,6 @@ function Home(props) {
 
     useEffect(() => {
         props.getRecipes();
-        // La siguiente línea es para quitar un warning molesto de la consola.
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.getRecipes]);
 
     let handleClick = (e) => {
@@ -39,7 +37,6 @@ function Home(props) {
         props.getRecipes();
         setPage(1);
         setOrder('')
-        window.location.reload();  // Si quiero recargar la página y limpiar todos los select, esta es una opción.
     }
 
     let handleFilterByTypeDiet = (e) => {
@@ -63,12 +60,12 @@ function Home(props) {
     }
 
     return (
-        <div className={style.btnYfilt}>
+        <div>
             {/* SearchBar */}
             <SearchBar />
-            <hr></hr>
+        
 
-            <div className={style.btnYfilt}>
+            <div >
 
                 {/* BOTON PARA REFRESCAR */}
                 <div>
@@ -105,7 +102,7 @@ function Home(props) {
                 {/* ORDEN ALFABÉTICO  */}
                 <div className={style.box}>
                     <select defaultValue={'DEFAULT'} name="alphabetical" onChange={e => handleOrderByAlphabet(e)}>
-                        <option value="DEFAULT" disabled>Order alphabetically</option>
+                        <option value="DEFAULT">Order alphabetically</option>
                         <option value="atoz">A to Z</option>
                         <option value="ztoa">Z to A</option>
                     </select>
@@ -114,7 +111,7 @@ function Home(props) {
                 {/* ORDEN DE MIN A MAX - MAX A MIN  */}
                 <div className={style.box}>
                     <select defaultValue={'DEFAULT'} name="numerical" onChange={e => handleOrderByScore(e)}>
-                        <option value="DEFAULT" disabled>Order by Score</option>
+                        <option value="DEFAULT" >Order by Score</option>
                         <option value="asc">Min to Max</option>
                         <option value="desc">Max to Min</option>
                     </select>
@@ -156,15 +153,15 @@ function Home(props) {
 
             <hr></hr>
 
-            <div id={style.pag}>
+            <div>
 
                 {
                     props.showedRecipes.length > 9 ?
                         <div >
                             <Nav recipesPage={recipesPage} showedRecipes={props.showedRecipes.length} paged={paged} setPage={setPage} page={page}></Nav>
-                            <span id={style.pag}> {page} of {Math.ceil(props.showedRecipes.length / recipesPage)} </span>
+                            <span > {page} of {Math.ceil(props.showedRecipes.length / recipesPage)} </span>
                         </div> :
-                        <div><span id={style.pag}> {page} of {Math.ceil(props.showedRecipes.length / recipesPage)} </span></div>
+                        <div><span > {page} of {Math.ceil(props.showedRecipes.length / recipesPage)} </span></div>
                 }
 
 

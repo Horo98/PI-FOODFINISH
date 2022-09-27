@@ -16,9 +16,9 @@ class Details extends React.Component {
 
     render() {
         const { recipeDetails } = this.props
-        var stars2 = Math.round((recipeDetails.healthScore / 10) / 2)
-    if (stars2 === 0) {
-        stars2 = stars2 + 1;
+        var stars = Math.round((recipeDetails.healthScore / 10) / 2)
+    if (stars === 0) {
+        stars = stars + 1;
     }
         return (
             
@@ -35,9 +35,9 @@ class Details extends React.Component {
                         {/* IMAGEN */}
                         <div>
                             {
-                                recipeDetails.image ? <img className={style.img} src={recipeDetails.image} alt="Img Not Found."></img>
+                                recipeDetails.image ? <img  src={recipeDetails.image} alt="Img Not Found."></img>
                                     :
-                                    <img className={style.img} src={"https://agencias.assist1.com.co/assets/images/no-image.png"} alt="Img Not Found."></img>
+                                    <img  src={"https://agencias.assist1.com.co/assets/images/no-image.png"} alt="Img Not Found."></img>
                             }
                         </div>
 
@@ -51,13 +51,13 @@ class Details extends React.Component {
                                     )
                                 })}
                             </div> :
-                            <h5 className={style.notFound}>This recipe has no dish type.</h5>
+                            <h5>This recipe has no dish type.</h5>
                         }
 
                         {/* DIETAS */}
                         {recipeDetails.diets ?
                             <div>
-                                <h3 className={style.title}>Types of diets: </h3>
+                                <h3>Types of diets: </h3>
                                 {
                                     recipeDetails.diets?.map(d => {
                                         if (d.hasOwnProperty('name')) {
@@ -73,41 +73,40 @@ class Details extends React.Component {
                                 }
                             </div>
                             :
-                            <h5 className={style.notFound}>This recipe has no diet type.</h5>
+                            <h5>This recipe has no diet type.</h5>
                         }
 
                         {/* RESUMEN */}
                         {recipeDetails.summary ?
                             <div>
-                                <h3 className={style.title}>Summary: </h3>
-                                <p className={style.area1}>{recipeDetails.summary?.replace(/<[^>]*>/g, '')}</p>
+                                <h3 >Summary: </h3>
+                                <p >{recipeDetails.summary?.replace(/<[^>]*>/g, '')}</p>
                             </div> :
-                            <h5 className={style.notFound}>This recipe does not have summary.</h5>
+                            <h5 >This recipe does not have summary.</h5>
                         }
 
                         {recipeDetails.ready ?
                             <div>
-                                <h3 className={style.title}>Cooking time:</h3>
+                                <h3 >Cooking time:</h3>
                                 <p>{recipeDetails.ready} minutes</p>
-                                <h3 className={style.health}>Health Score: </h3>
-                                <p>{stars2}/5</p>
+                                <h3 >Health Score: </h3>
+                                <p>{stars}/5</p>
                             </div> :
-                            <h5 className={style.notFound}>This recipe does not have score.</h5>
+                            <h5 >This recipe does not have score.</h5>
                         }
 
                         {/* PASO A PASO */}
                         {recipeDetails.steps ?
                             <div>
-                                <h3 className={style.title}>Steps: </h3>
-                                <ul>{Array.isArray(recipeDetails.steps) ? recipeDetails.steps.map(s => {
+                                <h3 >Steps: </h3>
+                                <ul>{recipeDetails.steps.map(s => {
                                     return (
-                                        <p className={style.area2} key={s.number}>{s.number}: {s.step}</p>
+                                        <p key={s.number}>{s.number}: {s.step}</p>
                                     )
-                                }) :
-                                    <p className={style.area2}>{recipeDetails.steps}</p>
+                                }) 
                                 } </ul>
                             </div> :
-                            <h5 className={style.notFound}>This recipe does not have step by step</h5>
+                            <h5>This recipe does not have step by step</h5>
                         }
 
                     </div> : <h1>Loading...</h1>

@@ -18,11 +18,6 @@
     margin: 5px;
     border-radius: 3px;
 }
-.bn:hover {
-    background-color: rgb(255, 255, 255);
-    color: black
-}
-
-.bn:disabled {
+.btn:hover{
     color: red;
 }
