@@ -15,6 +15,94 @@
     font-size: 40px;
 }
 
-#pag{
-    display:flex;
+
+.pag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn {
+    height: 25px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    height: 25px;
+    width: 80px;
+    transition: 0.2s;
+}
+
+.box select {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.box select:hover {
+    color: white;
+    background-color: rgb(80, 80, 80);
+    transition: 0.5s;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.pag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ref {
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+    width: 20px;
+    background-color: none;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.starRef {
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.pub {
+    color: rgba(255, 181, 43, 0.616);
+    font-family: cursive;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-right: 50px;
+    margin-top: -20px;
+}
+
+.pub2 {
+    color: rgba(255, 181, 43, 0.616);
+    font-family: cursive;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-right: 50px;
+    margin-top: -75px;
+}
+
+.load {
+    color: white;
+    padding: 100px;
 }

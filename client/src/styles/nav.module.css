@@ -1,8 +1,28 @@
-.general{
-    padding: auto;
+.general {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+}
+.list {
+    list-style-type: none;
+}
+.btn {
+    color: white;
+    border: none;
+    background-color: black;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 3px;
+}
+.bn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black
+}
 
+.bn:disabled {
+    color: red;
 }

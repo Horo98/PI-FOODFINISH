@@ -1,0 +1,356 @@
+.general {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 0.2%;
+    margin-left: 5%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ib {
+    margin-left: 10%;
+}
+
+.input {
+    width: 1000px;
+    height: 50px;
+    font-size: 200%;
+    color: grey;
+    border-radius: 20px;
+    text-indent: 5px;
+    outline: none;
+}
+
+.input::placeholder {
+    text-align: center;
+    color: grey;
+    font-size: x-large;
+}
+
+.btn {
+    margin-left: 50px;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    transition: 0.2s;
+}
+
+.img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1400px) {
+    .title {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 2%;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .txt {
+        font-size: 30px;
+        width: 120px;
+    }
+
+    .img {
+        height: 50px;
+        width: 50px;
+        margin-right: 5px;
+    }
+
+    .ib {
+        margin-left: 70px;
+    }
+
+    .input {
+        width: 900px;
+        height: 50px;
+        font-size: 150%;
+        color: grey;
+        border-radius: 25px;
+        text-indent: 5px;
+        outline: none;
+        margin-top: 5px;
+    }
+
+    .input::placeholder {
+        text-align: center;
+        color: grey;
+        font-size: 25px;
+    }
+
+    .btn {
+        margin-left: 20px;
+        height: 35px;
+        width: 85px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: rgb(80, 80, 80);
+        color: white;
+        transition: 0.2s;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 2%;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .txt {
+        font-size: 25px;
+        width: 90px;
+    }
+
+    .img {
+        height: 48px;
+        width: 48px;
+        margin-right: 5px;
+    }
+
+    .ib {
+        margin-left: 20px;
+    }
+
+    .input {
+        width: 470px;
+        height: 40px;
+        font-size: 150%;
+        color: grey;
+        border-radius: 20px;
+        text-indent: 5px;
+        outline: none;
+        margin-top: 5px;
+    }
+
+    .input::placeholder {
+        text-align: center;
+        color: grey;
+        font-size: 20px;
+    }
+
+    .btn {
+        margin-left: 20px;
+        height: 30px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: rgb(80, 80, 80);
+        color: white;
+        transition: 0.2s;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 1%;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .txt {
+        font-size: 20px;
+        width: 90px;
+    }
+
+    .img {
+        height: 45px;
+        width: 45px;
+        margin-right: 0px;
+    }
+
+    .ib {
+        margin-left: 5px;
+    }
+
+    .input {
+        width: 300px;
+        height: 30px;
+        font-size: 120%;
+        color: grey;
+        border-radius: 18px;
+        text-indent: 5px;
+        outline: none;
+    }
+
+    .input::placeholder {
+        text-align: center;
+        color: grey;
+        font-size: 18px;
+    }
+
+    .btn {
+        margin-left: 20px;
+        height: 25px;
+        width: 75px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: rgb(80, 80, 80);
+        color: white;
+        transition: 0.2s;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 1%;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .txt {
+        font-size: 15px;
+        width: 60px;
+    }
+
+    .img {
+        padding-top: 5px;
+        height: 35px;
+        width: 35px;
+        margin-right: 0px;
+    }
+
+    .ib {
+        margin-left: 30px;
+    }
+
+    .input {
+        width: 200px;
+        height: 25px;
+        font-size: 120%;
+        color: grey;
+        border-radius: 18px;
+        text-indent: 5px;
+        outline: none;
+    }
+
+    .input::placeholder {
+        text-align: center;
+        color: grey;
+        font-size: 12px;
+    }
+
+    .btn {
+        margin-left: 10px;
+        height: 20px;
+        width: 50px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: rgb(80, 80, 80);
+        color: white;
+        transition: 0.2s;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .title {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 1%;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .txt {
+        font-size: 15px;
+        width: 60px;
+    }
+
+    .img {
+        height: 30px;
+        width: 30px;
+        margin-right: 0px;
+    }
+
+    .ib {
+        margin-left: 10px;
+    }
+
+    .input {
+        width: 200px;
+        height: 25px;
+        font-size: 120%;
+        color: grey;
+        border-radius: 18px;
+        text-indent: 5px;
+        outline: none;
+    }
+
+    .input::placeholder {
+        text-align: center;
+        color: grey;
+        font-size: 12px;
+    }
+
+    .btn {
+        margin-left: 10px;
+        height: 20px;
+        width: 50px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: rgb(80, 80, 80);
+        color: white;
+        transition: 0.2s;
+    }
+}
