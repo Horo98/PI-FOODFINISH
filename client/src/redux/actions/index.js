@@ -3,7 +3,7 @@ import axios from "axios";
 export function getAllRecipes(){
     return async function(dispatch){
         try {
-            const response = await axios.get('/recipes')
+            const response = await axios.get('http://localhost:3001/recipes')
             return dispatch({
                 type: 'GET_ALL_RECIPES',
                 payload: response.data,
@@ -17,7 +17,7 @@ export function getAllRecipes(){
 export function getRecipeByName(name) {
     return async function(dispatch) {
         try {
-            const response = await axios.get(`/recipes/?name=${name}`)
+            const response = await axios.get(`http://localhost:3001/recipes/?name=${name}`)
             return dispatch({
                 type: "GET_RECIPE_BY_NAME",
                 payload: response.data
@@ -32,7 +32,7 @@ export function getRecipeByName(name) {
 export function getRecipeDetails(payload) {
     return async function(dispatch) {
         try {
-            const response = await axios.get(`/recipes/${payload}`);
+            const response = await axios.get(`http://localhost:3001/recipes/${payload}`);
             return dispatch({
                 type: "GET_RECIPE_DETAILS",
                 payload: response.data
@@ -52,8 +52,8 @@ export function clearDetail(){
 export function getDiets() {
     return async function(dispatch) {
         try {
-            let response = await axios.get(`/types`);
-            if(response.data.length < 13) response = await axios.get(`/types`);
+            let response = await axios.get(`http://localhost:3001/types`);
+            if(response.data.length < 13) response = await axios.get(`http://localhost:3001/types`);
             return dispatch({
                 type: "GET_DIETS",
                 payload: response.data.map(d => d.name)
