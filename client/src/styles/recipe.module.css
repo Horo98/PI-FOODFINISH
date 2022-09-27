@@ -1,0 +1,24 @@
+.recipe{
+    width:22vw;
+    height: auto;
+    padding-bottom:0.3rem;
+background-image: url("https://static.vecteezy.com/system/resources/previews/003/498/690/non_2x/wood-texture-background-wood-planks-or-wood-wall-free-photo.jpg");
+border-radius: 1rem;
+user-select:none
+}
+
+.recipe:hover {font-size: 125%; transition: 500ms;}
+
+.name{
+    user-select:none;
+    font-size: 25px;
+    overflow: hidden;
+}
+.name:hover{
+    font-size: 30px;
+    transition: 500ms;
+}
+.notFound{
+    width:17rem;
+    height: auto;
+}

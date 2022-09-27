@@ -1,0 +1,20 @@
+
+
+.container{
+    padding: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem 10rem;
+  
+
+}
+.loading{
+    padding-top:15rem;
+    font-size: 40px;
+}
+
+#pag{
+    display:flex;
+}
