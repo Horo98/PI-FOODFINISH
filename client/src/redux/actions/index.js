@@ -3,7 +3,7 @@ import axios from "axios";
 export function getAllRecipes(){
     return async function(dispatch){
         try {
-            const response = await axios.get('http://localhost:3001/recipes')
+            const response = await axios.get('http://ec2-3-219-19-205.compute-1.amazonaws.com/recipes')
             return dispatch({
                 type: 'GET_ALL_RECIPES',
                 payload: response.data,
@@ -17,7 +17,7 @@ export function getAllRecipes(){
 export function getRecipeByName(name) {
     return async function(dispatch) {
         try {
-            const response = await axios.get(`http://localhost:3001/recipes/?name=${name}`)
+            const response = await axios.get(`http://ec2-3-219-19-205.compute-1.amazonaws.com/recipes/?name=${name}`)
             return dispatch({
                 type: "GET_RECIPE_BY_NAME",
                 payload: response.data
@@ -32,7 +32,7 @@ export function getRecipeByName(name) {
 export function getRecipeDetails(payload) {
     return async function(dispatch) {
         try {
-            const response = await axios.get(`http://localhost:3001/recipes/${payload}`);
+            const response = await axios.get(`http://ec2-3-219-19-205.compute-1.amazonaws.com/recipes/${payload}`);
             return dispatch({
                 type: "GET_RECIPE_DETAILS",
                 payload: response.data
@@ -52,7 +52,7 @@ export function clearDetail(){
 export function getDiets() {
     return async function(dispatch) {
         try {
-            let response = await axios.get(`http://localhost:3001/types`);
+            let response = await axios.get(`http://ec2-3-219-19-205.compute-1.amazonaws.com/types`);
             return dispatch({
                 type: "GET_DIETS",
                 payload: response.data.map(d => d.name)
@@ -66,7 +66,7 @@ export function getDiets() {
 export function createRecipe(payload) {
     return async function(dispatch) {
         try {
-            var response = await axios.post(`http://localhost:3001/recipe`, payload);
+            var response = await axios.post(`http://ec2-3-219-19-205.compute-1.amazonaws.com/recipe`, payload);
             return dispatch({
                 type: "CREATE_RECIPE",
                 payload: response,
